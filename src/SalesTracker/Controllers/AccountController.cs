@@ -79,5 +79,9 @@ namespace SalesTracker.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index");
         }
+        public IActionResult Details()
+        {
+            return View();
+        }
     }
 }

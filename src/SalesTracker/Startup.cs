@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using SalesTracker.Models;
+using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace SalesTracker
@@ -31,8 +32,14 @@ namespace SalesTracker
                 .AddDefaultTokenProviders();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseStaticFiles();
             app.UseIdentity();
             app.UseMvc(routes =>
             {
@@ -40,9 +47,12 @@ namespace SalesTracker
                     name: "default",
                     template: "{controller=Account}/{action=Index}/{id?}");
             });
+            loggerFactory.AddConsole();
+
+
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("You Don't Have Access to this page! Please Log In.");
+                await context.Response.WriteAsync("You don't have access to this page! Or the page doesn't exist.");
             });
         }
     }

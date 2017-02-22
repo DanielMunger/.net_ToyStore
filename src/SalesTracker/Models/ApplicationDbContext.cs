@@ -9,9 +9,17 @@ namespace SalesTracker.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+        public DbSet<Toy> Toys { get; set; }
+        public DbSet<Sale> Sales { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }
