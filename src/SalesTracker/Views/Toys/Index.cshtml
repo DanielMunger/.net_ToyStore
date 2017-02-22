@@ -33,7 +33,7 @@ foreach (var toy in Model)
                             <p>@toy.Description</p>
                         </div>
                         <div class="card-action">
-                            @Html.ActionLink("Details", "Details")
+                            @Html.ActionLink("Details", "Details", new { id = toy.ToyId })
                         </div>
                     </div>
                 </div>

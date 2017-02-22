@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Manage User Roles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SalesTracker.Models.Toy
+
+@{
+
+    string Image = "";
+
+
+        if (Model.Picture != null)
+        {
+            var base64 = Convert.ToBase64String(Model.Picture);
+            Image = String.Format("data:image/gif;base64,{0}", base64);
+        }
+
+
+        <div class="row">
+            <div class="col m6">
+                <div class="col s12 m7">
+                    <h2 class="header">@Model.Name</h2>
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <img src="@Image">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>@Model.Description</p>
+                            </div>
+                            <div class="card-content">
+                                <p>Price: $@Model.Price</p>
+                            </div>
+                            @if(User.IsInRole("Manager"))
+                                {
+                                    <div class="card-content">
+                                        <p>Cost: $@Model.Cost</p>
+                                    </div>
+                            <div class="card-action">
+                                @Html.ActionLink("Edit", "Edit")
+                            </div>
+                            <div class="card-action">
+                                @Html.ActionLink("Delete", "Delete")
+                            </div>
+                                }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+}

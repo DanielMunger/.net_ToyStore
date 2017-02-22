@@ -53,6 +53,12 @@ namespace SalesTracker.Controllers
             toyRepo.Create(newToy);
             return RedirectToAction("Index");
         }
+
+        public IActionResult Details (int id)
+        {
+            var thisToy = toyRepo.Toys.FirstOrDefault(ToysController => ToysController.ToyId == id);
+            return View(thisToy);
+        }
         public IActionResult Edit()
         {
             return View();
