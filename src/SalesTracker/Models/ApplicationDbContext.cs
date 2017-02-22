@@ -9,14 +9,17 @@ namespace SalesTracker.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public ApplicationDbContext()
+        {
 
+        }
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
         }
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            base.OnModelCreating(builder);
+            options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SalesTracker;integrated security=True");
         }
         public DbSet<Toy> Toys { get; set; }
         public DbSet<Sale> Sales { get; set; }

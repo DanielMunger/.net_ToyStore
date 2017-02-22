@@ -214,11 +214,15 @@ C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTr
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222173044_Initial.Designer.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222191552_AddModels.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222191552_AddModels.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222215849_ToyName.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222215849_ToyName.Designer.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\ApplicationDbContext.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\ApplicationUser.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Comment.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Sale.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Toy.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Repositories\EFToyRepository.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Repositories\IToyRepository.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\ViewModels\LoginViewModel.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\ViewModels\RegisterViewModel.cs

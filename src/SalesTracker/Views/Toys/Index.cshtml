@@ -1,5 +1,44 @@
 ﻿@{
     ViewData["Title"] = "Manage User Roles";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    
 }
+@model List<SalesTracker.Models.Toy>
 <h1>Toy Store Inventory</h1>
+@{
+
+string Image = "";
+
+foreach (var toy in Model)
+{
+    
+    
+ if (toy.Picture != null)
+ {
+    var base64 = Convert.ToBase64String(toy.Picture);
+   Image = String.Format("data:image/gif;base64,{0}", base64);
+ }
+
+    
+    <div class="row">
+        <div class="col m6">
+            <div class="col s12 m7">
+                <h2 class="header">@toy.Name</h2>
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="@Image">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>@toy.Description</p>
+                        </div>
+                        <div class="card-action">
+                            @Html.ActionLink("Details", "Details")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+}
