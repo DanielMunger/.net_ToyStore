@@ -13,5 +13,9 @@ namespace SalesTracker.Models
         public decimal Total { get; set; }
         public virtual List<Comment> Comments { get; set; }
         public virtual List<Toy> Toys { get; set; }
+
+        public Sale() { }
     }
+
+
 }

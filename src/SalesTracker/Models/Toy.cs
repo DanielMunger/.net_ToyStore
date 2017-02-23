@@ -12,6 +12,7 @@ namespace SalesTracker.Models
         public string Name { get; set; }
         public int Cost { get; set; }
         public int Price { get; set; }
+        public int NumberOf { get; set; }
         public byte[] Picture { get; set; }
         public string Description { get; set; }
         public virtual Sale Sale { get; set; }

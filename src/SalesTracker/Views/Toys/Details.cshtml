@@ -38,6 +38,20 @@
 
         });
 
+        $('.sale-view').click(function () {
+            $.ajax({
+                type: 'POST',
+                data: {id: @Model.ToyId},
+                dataType: 'html',
+                url: '@Url.Action("AddToCart", "Sales")',
+                success: function (result) {
+                    $('#saleView').html(result);
+                
+                }
+            });
+        
+        });
+
     })
 </script>
 
@@ -68,6 +82,10 @@
                             <div class="card-content">
                                 <p>Price: $@Model.Price</p>
                             </div>
+                            <div class="card-action sale-view">
+                                Add to Cart
+                               
+                            </div>
                             @if(User.IsInRole("Manager"))
                                 {
                                     <div class="card-content">
@@ -75,13 +93,13 @@
                                     </div>
                             <div class="card-action edit-view" >
                                 Edit
-                                @*@Html.ActionLink("Edit", "Edit", new { id = Model.ToyId})*@
+                               
                             </div>
                             <div class="card-action delete-view">
                                 Delete
-                                @*@Html.ActionLink("Edit", "Edit", new { id = Model.ToyId})*@
+                               
                             </div>
-                                }
+                            }
                         </div>
             
                     </div>
@@ -89,6 +107,7 @@
             </div>
                 <div id ="editView"></div>
                 <div id="deleteView"></div>
+                <div id="saleView"></div>
         </div>
     
 }
