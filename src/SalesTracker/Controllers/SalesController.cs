@@ -80,9 +80,8 @@ namespace SalesTracker.Controllers
             _db.Sales.Add(thisSale);
             _db.SaveChanges();
             Debug.WriteLine(thisSale.SaleId);
-            Sale newSale = _db.Sales.FirstOrDefault(s => s.SaleId == thisSale.SaleId);
-            
-            return View("Index");
+            Sale newSale = _db.Sales.FirstOrDefault(s => s.SaleId == thisSale.SaleId);          
+            return View("Index", thisToy);
         }
     }
 }
