@@ -88,10 +88,11 @@ namespace SalesTracker.Controllers
             var thisToy = toyRepo.Toys.FirstOrDefault(ToysController => ToysController.ToyId == id);
             return View(thisToy);
         }
-        [HttpPost]
-        public IActionResult Delete(Toy toy)
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
         {
-            toyRepo.Delete(toy);
+            var thisToy = toyRepo.Toys.FirstOrDefault(ToysController => ToysController.ToyId == id);
+            toyRepo.Delete(thisToy);
             return RedirectToAction("Index");
         }
        

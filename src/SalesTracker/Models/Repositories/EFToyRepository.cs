@@ -48,6 +48,7 @@ namespace SalesTracker.Models.Repositories
         }
         public void Delete(Toy toy)
         {
+            Debug.WriteLine("name2:"+toy.Name);
             db.Toys.Remove(toy);
             db.SaveChanges();
         }

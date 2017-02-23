@@ -1,5 +1,5 @@
---temp-output:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\obj\Debug\netcoreapp1.0\
---out:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\bin\Debug\netcoreapp1.0\SalesTracker.dll
+--temp-output:C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\obj\Debug\netcoreapp1.0\
+--out:C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\bin\Debug\netcoreapp1.0\SalesTracker.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -202,27 +202,27 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\obj\Debug\netcoreapp1.0\SalesTrackerdotnet-compile.deps.json",SalesTracker.deps.json
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Program.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Startup.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Controllers\AccountController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Controllers\CommentsController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Controllers\RolesController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Controllers\SalesController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Controllers\ToysController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222173044_Initial.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222173044_Initial.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222191552_AddModels.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222191552_AddModels.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222215849_ToyName.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\20170222215849_ToyName.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Migrations\ApplicationDbContextModelSnapshot.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\ApplicationDbContext.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\ApplicationUser.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Comment.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Sale.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Toy.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Repositories\EFToyRepository.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\Models\Repositories\IToyRepository.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\ViewModels\LoginViewModel.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\SalesTracker\src\SalesTracker\ViewModels\RegisterViewModel.cs
+--resource:"C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\obj\Debug\netcoreapp1.0\SalesTrackerdotnet-compile.deps.json",SalesTracker.deps.json
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Program.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Startup.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\AccountController.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\CommentsController.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\RolesController.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\SalesController.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\ToysController.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170222173044_Initial.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170222173044_Initial.Designer.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170222191552_AddModels.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170222191552_AddModels.Designer.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170222215849_ToyName.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170222215849_ToyName.Designer.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\ApplicationDbContext.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\ApplicationUser.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\Comment.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\Sale.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\Toy.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\Repositories\EFToyRepository.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\Repositories\IToyRepository.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\ViewModels\LoginViewModel.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\ViewModels\RegisterViewModel.cs
