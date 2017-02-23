@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.EntityFrameworkCore;
 
 namespace SalesTracker.Controllers
 {
@@ -68,23 +69,19 @@ namespace SalesTracker.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToCart(int id)
         {
-            var thisToy = toyRepo.Toys.FirstOrDefault(ToysController => ToysController.ToyId == id);
-
-            
+            Toy thisToy = toyRepo.Toys.FirstOrDefault(ToysController => ToysController.ToyId == id);
             thisToy.NumberOf -= 1;
-            
-            var thisSale = new Sale();
+            Sale thisSale = new Sale();
+            Debug.WriteLine(thisToy.Name);
             thisSale.User = await _userManager.GetUserAsync(User);
             thisSale.Total += thisToy.Price;
-            _db.Add(thisSale);
+            thisToy.Sale = thisSale;
+            _db.Entry(thisToy).State = EntityState.Modified;
+            _db.Sales.Add(thisSale);
             _db.SaveChanges();
-
-
-            thisSale.Toys.Append(thisToy);
-            _db.Add(thisSale);
-            _db.SaveChanges();
-            //Debug.WriteLine(thisSale.Toys[0].Name);
-            Debug.WriteLine("saleId:" + thisSale.SaleId);
+            Debug.WriteLine(thisSale.SaleId);
+            Sale newSale = _db.Sales.FirstOrDefault(s => s.SaleId == thisSale.SaleId);
+            
             return View("Index");
         }
     }

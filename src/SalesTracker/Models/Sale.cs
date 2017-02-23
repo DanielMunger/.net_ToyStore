@@ -11,8 +11,8 @@ namespace SalesTracker.Models
         public int SaleId { get; set; }
         public virtual ApplicationUser User { get; set; }
         public decimal Total { get; set; }
-        public virtual List<Comment> Comments { get; set; }
-        public virtual List<Toy> Toys { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Toy> Toys { get; set; }
 
         public Sale() { }
     }

@@ -214,6 +214,8 @@
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170222215849_ToyName.Designer.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170223180129_ToyModelChange.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170223180129_ToyModelChange.Designer.cs"
+"C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170223214411_ICollection.cs"
+"C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20170223214411_ICollection.Designer.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\ApplicationDbContext.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\ApplicationUser.cs"
