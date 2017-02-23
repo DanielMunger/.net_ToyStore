@@ -1,4 +1,30 @@
-﻿@{
-    ViewData["Title"] = "Manage User Roles";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿
+@model SalesTracker.Models.Toy
+
+<h1>Edit @Model.Name</h1>
+<div class="row">
+    <div class="col md3"></div>
+    <div class="col md9">
+        <form method="post" asp-action="Edit" asp-controller="Toys" enctype="multipart/form-data">
+            <input type="hidden" value="@Model.ToyId" name="id" />
+            <label for="name">Toy Name</label>
+            <input type="text" id="name"  name="name" placeholder="@Model.Name" value="@Model.Name"/>
+            <br />
+            <label for="description">Toy Description</label>
+            <input type="text" id="description"  name="description" placeholder="@Model.Description" value="@Model.Description"/>
+            <br />
+            <label for="cost">Toy Cost</label>
+            <input type="number" id="cost"  name="cost" placeholder="@Model.Cost" value="@Model.Cost"/>
+            <br />
+            <label for="price">Toy Price</label>
+            <input type="number" id="price"  name="price" placeholder="@Model.Price" value="@Model.Price"/>
+            <br />
+            <label for="picture">Product Image</label>
+            <br />
+            <input type="file" id="picture" required name="picture" />
+            <br />
+            <input class="btn blue" type="submit" value="Edit Product" />
+            <br />
+        </form>
+    </div>
+</div>

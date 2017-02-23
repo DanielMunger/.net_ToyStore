@@ -59,23 +59,41 @@ namespace SalesTracker.Controllers
             var thisToy = toyRepo.Toys.FirstOrDefault(ToysController => ToysController.ToyId == id);
             return View(thisToy);
         }
-        public IActionResult Edit()
+        public IActionResult Edit(int id)
         {
-            return View();
+            var thisToy = toyRepo.Toys.FirstOrDefault(ToysController => ToysController.ToyId == id);
+            return View(thisToy);
         }
         [HttpPost]
-        public async Task<IActionResult> Edit(int id)
+        public IActionResult Edit(int id, string name, string description, int cost, int price, IFormFile picture)
         {
-            return RedirectToAction("Index");
+            
+            byte[] pictureArray = new byte[0];
+            if (picture.Length > 0)
+            {
+                using (var fileStream = picture.OpenReadStream())
+                using (var ms = new MemoryStream())
+                {
+                    fileStream.CopyTo(ms);
+                    pictureArray = ms.ToArray();
+                }
+            }
+            toyRepo.Edit(id, name, description, price, cost, pictureArray);
+
+            
+            return RedirectToAction("Details", new {id=id });
         }
-        public IActionResult Delete()
+        public IActionResult Delete(int id)
         {
-            return View();
+            var thisToy = toyRepo.Toys.FirstOrDefault(ToysController => ToysController.ToyId == id);
+            return View(thisToy);
         }
         [HttpPost]
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(Toy toy)
         {
+            toyRepo.Delete(toy);
             return RedirectToAction("Index");
         }
+       
     }
 }

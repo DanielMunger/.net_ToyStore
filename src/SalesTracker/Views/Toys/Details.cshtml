@@ -5,6 +5,42 @@
 
 @model SalesTracker.Models.Toy
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        $('.edit-view').click(function () {
+            $.ajax({
+                type: 'GET',
+                data: {id: @Model.ToyId},
+                dataType: 'html',
+                url: '@Url.Action("Edit", "Toys")',
+                success: function (result) {
+                    $('#editView').html(result);
+
+                }
+
+            });
+
+        });
+
+        $('.delete-view').click(function () {
+            $.ajax({
+                type: 'GET',
+                data: {id: @Model.ToyId},
+                dataType: 'html',
+                url: '@Url.Action("Delete", "Toys")',
+                success: function (result) {
+                    $('#deleteView').html(result);
+
+                }
+
+            });
+
+        });
+
+    })
+</script>
+
 @{
 
     string Image = "";
@@ -37,17 +73,22 @@
                                     <div class="card-content">
                                         <p>Cost: $@Model.Cost</p>
                                     </div>
-                            <div class="card-action">
-                                @Html.ActionLink("Edit", "Edit")
+                            <div class="card-action edit-view" >
+                                Edit
+                                @*@Html.ActionLink("Edit", "Edit", new { id = Model.ToyId})*@
                             </div>
-                            <div class="card-action">
-                                @Html.ActionLink("Delete", "Delete")
+                            <div class="card-action delete-view">
+                                Delete
+                                @*@Html.ActionLink("Edit", "Edit", new { id = Model.ToyId})*@
                             </div>
                                 }
                         </div>
+            
                     </div>
                 </div>
             </div>
+                <div id ="editView"></div>
+                <div id="deleteView"></div>
         </div>
     
 }

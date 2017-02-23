@@ -31,11 +31,20 @@ namespace SalesTracker.Models.Repositories
             db.SaveChanges();
             return toy;
         }
-        public Toy Edit(Toy toy)
+        public Toy Edit(int id, string name, string description, int cost, int price, byte[] picture)
         {
-            db.Entry(toy).State = EntityState.Modified;
-            db.SaveChanges();
-            return toy;
+            var toyFromDb = db.Toys.FirstOrDefault(toy => toy.ToyId == id);
+            if (toyFromDb != null)
+            {
+                toyFromDb.Name = name;
+                toyFromDb.Price = price;
+                toyFromDb.Cost = cost;
+                toyFromDb.Description = description;
+                toyFromDb.Picture = picture;
+                db.SaveChanges();
+            }
+           
+            return toyFromDb;
         }
         public void Delete(Toy toy)
         {

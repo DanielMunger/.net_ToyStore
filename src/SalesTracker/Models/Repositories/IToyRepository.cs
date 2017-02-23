@@ -9,7 +9,7 @@ namespace SalesTracker.Models.Repositories
         {
         IQueryable<Toy> Toys { get; }
         Toy Create(Toy toy);
-        Toy Edit(Toy toy);
+        Toy Edit(int id, string name, string description, int cost, int price, byte[] picture);
         void Delete(Toy toy);
 
         }
