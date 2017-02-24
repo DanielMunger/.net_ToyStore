@@ -25,7 +25,6 @@ namespace SalesTracker.Controllers
         }
         public IActionResult Index()
         {
-            Debug.WriteLine(_db.Comments.ToList().Count);
             return View(_db.Comments.ToList());
         }
         
@@ -34,10 +33,10 @@ namespace SalesTracker.Controllers
         {
             Comment newComment = new Comment();
             newComment.Body = body;
+            newComment.User = await _userManager.GetUserAsync(User);
             _db.Comments.Add(newComment);
             _db.SaveChanges();
-
-            return RedirectToAction("Index");
+            return View("Index", _db.Comments.ToList());
         }
         public IActionResult Edit()
         {
